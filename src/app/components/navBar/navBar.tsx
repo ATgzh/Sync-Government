@@ -2,7 +2,6 @@
 import Image from "next/image";
 import styles from './navBar.module.css'
 import purpleLogo from '../../assets/purpleImage.png'
-import whiteLogo from '../../assets/whiteImage.png'
 import { useRouter,usePathname } from "next/navigation";
 import { useUser, UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
@@ -28,7 +27,7 @@ export default function Navbar() {
         </div>
         <div style={{height: '40px', width: '1px', backgroundColor: '#ccc', margin: '0 16px', marginTop:'5px', flexShrink: 0}}
           />
-      <Image src={isHome? whiteLogo: purpleLogo} alt="MNSU Logo" className={styles.img} onClick={() => router.push('/')}/>
+      <Image src={purpleLogo} alt="MNSU Logo" className={styles.img} onClick={() => router.push('/')}/>
       {/* Profile Section at Bottom  */}
       <div className={styles.profileSection}>
         <SignedIn>

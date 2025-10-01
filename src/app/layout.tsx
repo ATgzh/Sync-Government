@@ -3,7 +3,7 @@
 import { Geist, Geist_Mono, Kanit  } from "next/font/google";
 
 import "./globals.css";
-import NavBar from "./components/navBar/navBar";
+import Header from "./components/header/Header";
 
 import { CollapsedProvider } from "./components/sideBar/sideBarContext";
 
@@ -39,14 +39,14 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} antialiased`}
         >
-          <header className="flex justify-end items-center p-4 gap-4 h-16">
-            <SignedIn>
-              <AssignRoleAfterLogin />
-            </SignedIn>
-          </header>
-          <CollapsedProvider>   
-            <NavBar />
-            {children}
+          <SignedIn>
+            <AssignRoleAfterLogin />
+          </SignedIn>
+          <CollapsedProvider>
+            <Header />
+            <main className="min-h-screen">
+              {children}
+            </main>
           </CollapsedProvider>
         </body>
       </html>

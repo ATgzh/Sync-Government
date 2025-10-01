@@ -5,7 +5,6 @@ import { useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import logo from '../app/assets/purpleLogo.png'
 import Card from "./components/card/Card";
-import Navbar from "./components/navBar/navBar";
 import Footer from './components/footer'
 
 export default function HomePage() {
@@ -25,7 +24,6 @@ export default function HomePage() {
 
   return (
     <div className={styles.homePage}>
-      <Navbar />
       {/* Main Heading */}
       <div className={styles.header}>
         <div className={styles.headerContent}>

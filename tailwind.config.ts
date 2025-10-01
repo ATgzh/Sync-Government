@@ -23,21 +23,36 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        // Updated color system for new design
         primary: {
-          DEFAULT: "#48316F", // Changed from hsl(var(--primary)) to hardcoded #48316F
-          foreground: "#FFFFFF", // Changed to white for better contrast
+          DEFAULT: "#48316F", // MNSU Purple
+          50: "#f8f6fc",
+          100: "#f0ecf8",
+          200: "#e3dcf2",
+          300: "#d0c1e8",
+          400: "#b89ddb",
+          500: "#9f78cc",
+          600: "#8659b8",
+          700: "#714aa0",
+          800: "#5d3e83",
+          900: "#48316F",
+          950: "#2f1f47",
+          foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          DEFAULT: "#febd11", // MNSU Gold
+          50: "#fffbeb",
+          100: "#fef3c7",
+          200: "#fde68a",
+          300: "#fcd34d",
+          400: "#febd11",
+          500: "#f59e0b",
+          600: "#d97706",
+          700: "#b45309",
+          800: "#92400e",
+          900: "#78350f",
+          950: "#451a03",
+          foreground: "#2c2c54",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
