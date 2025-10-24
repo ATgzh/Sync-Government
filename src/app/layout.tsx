@@ -1,15 +1,12 @@
 "use client";
 
-import { Geist, Geist_Mono, Kanit  } from "next/font/google";
-
+import { Geist, Geist_Mono, Kanit } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header/Header";
-
 import { CollapsedProvider } from "./components/sideBar/sideBarContext";
-
 import { ClerkProvider, SignedIn } from "@clerk/nextjs";
-import { useAssignRole } from "../app/hooks/useAssignRole"; 
-
+import { useAssignRole } from "../app/hooks/useAssignRole";
+import MainNavBar from "./components/navBar/MainNavBar";
+import Footer from "./components/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +17,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 const kanit = Kanit({
   variable: '--font-kanit',
   subsets: ['latin'],
-  weight: ['400', '500', '700'], // Customize weights if needed
+  weight: ['400', '500', '700'],
   display: 'swap',
 });
 
@@ -33,20 +31,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} antialiased`}
-        >
+        <body className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} antialiased min-h-screen flex flex-col`}>
           <SignedIn>
             <AssignRoleAfterLogin />
           </SignedIn>
           <CollapsedProvider>
-            <Header />
-            <main className="min-h-screen">
-              {children}
-            </main>
+            {children}
           </CollapsedProvider>
         </body>
       </html>

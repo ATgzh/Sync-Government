@@ -6,7 +6,9 @@ import { NextResponse } from "next/server";
 const isProtectedRoute = createRouteMatcher([
   "/student(.*)",
   "/attorney(.*)",
-  "/senate(.*)", 
+  "/senate/dashboard(.*)",
+  "/senate/meetings(.*)",
+  "/senate/votes(.*)",
   "/dashboard(.*)",
   "/admin(.*)"
 ]);
@@ -108,7 +110,9 @@ export const config = {
     "/(api|trpc)(.*)",
     "/student/:path*", // Allow attorneys to access /student
     "/attorney/:path*",
-    "/senate/:path*",
+    "/senate/dashboard/:path*",
+    "/senate/meetings/:path*",
+    "/senate/votes/:path*",
     "/dashboard/:path*",
     "/forum/:path*",
     "/admin/:path*"
