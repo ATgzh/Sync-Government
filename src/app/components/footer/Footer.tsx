@@ -8,10 +8,10 @@ export default function Footer() {
         <div>
           <h3 className="text-white text-lg font-kanit mb-6">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="text-white/80 hover:text-white font-kanit text-base">Elections</a></li>
-            <li><a href="#" className="text-white/80 hover:text-white font-kanit text-base">Live Stream</a></li>
-            <li><a href="#contact" className="text-white/80 hover:text-white font-kanit text-base">Contact</a></li>
-            <li><a href="#" className="text-white/80 hover:text-white font-kanit text-base">State-Wide Government</a></li>
+            <li><a href="/calendar" className="text-white/80 hover:text-white font-kanit text-base">Calendar</a></li>
+            <li><a href="https://www.youtube.com/@MNSUStudentGovernment/streams" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white font-kanit text-base">Live Stream</a></li>
+            <li><a href="/archives" className="text-white/80 hover:text-white font-kanit text-base">Archive</a></li>
+            <li><a href="/resources" className="text-white/80 hover:text-white font-kanit text-base">Resources</a></li>
           </ul>
         </div>
         {/* Contact Info */}
